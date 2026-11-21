@@ -1,0 +1,75 @@
+name: Import skills collection
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+      - name: Extract and verify collection
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, stat, zipfile
+          from pathlib import Path, PurePosixPath
+          archive = Path('satis-pazarlama-skills.zip')
+          if not archive.exists():
+              print('Collection already imported.')
+              raise SystemExit(0)
+          expected = 'a7d25bfa9ee7ddbd15521e0a841bfb6a3bba6d4ce1ac7e35c60dacf9b548ce02'
+          assert hashlib.sha256(archive.read_bytes()).hexdigest() == expected, 'Archive hash mismatch'
+          workspace = Path.cwd().resolve()
+          count = 0
+          with zipfile.ZipFile(archive) as bundle:
+              for entry in bundle.infolist():
+                  if entry.is_dir():
+                      continue
+                  parts = PurePosixPath(entry.filename).parts
+                  assert len(parts) > 1 and parts[0] == 'sales-marketing-skills'
+                  assert '..' not in parts and '.git' not in parts
+                  target = Path(*parts[1:])
+                  assert target.resolve().is_relative_to(workspace)
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  raw = bundle.read(entry)
+                  mode = entry.external_attr >> 16
+                  if stat.S_ISLNK(mode):
+                      link = raw.decode('utf-8')
+                      assert (target.parent / link).resolve().is_relative_to(workspace)
+                      if target.exists() or target.is_symlink():
+                          target.unlink()
+                      target.symlink_to(link)
+                  else:
+                      target.write_bytes(raw)
+                      if mode & 0o111:
+                          target.chmod(0o755)
+                  count += 1
+          manifest = json.loads(Path('KAYNAK_MANIFESTOSU.json').read_text())
+          verified = 0
+          for source in manifest:
+              for item in source['files']:
+                  path = Path(item['path'])
+                  raw = os.readlink(path).encode() if path.is_symlink() else path.read_bytes()
+                  assert hashlib.sha256(raw).hexdigest() == item['sha256'], item['path']
+                  verified += 1
+          assert count == 1494 and verified == 1487
+          assert len(list(Path('kaynaklar').rglob('SKILL.md'))) == 219
+          archive.unlink()
+          print(f'Imported {count} files; verified {verified} source files and 219 skills.')
+          PY
+      - name: Commit imported files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --force --all
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'Import 219 skills with all source files and Turkish catalog'
+          git push origin HEAD:main
