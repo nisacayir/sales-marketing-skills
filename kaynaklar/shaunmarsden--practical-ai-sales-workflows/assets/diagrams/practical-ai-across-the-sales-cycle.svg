@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="390" viewBox="0 0 1000 390" role="img" aria-labelledby="title description">
+  <title id="title">Practical AI across the sales cycle</title>
+  <desc id="description">Five sales stages, from finding a prospect to learning from an outcome. AI prepares work at each stage and a person checks before acting.</desc>
+  <style>
+    :root{--ink:#1f2937;--muted:#57606a;--line:#d0d7de;--card:#f6f8fa;--accent:#0969da;--accent-bg:#ddf4ff;--person:#8250df;--person-bg:#fbefff}
+    @media (prefers-color-scheme:dark){:root{--ink:#f0f6fc;--muted:#a9b1bb;--line:#30363d;--card:#161b22;--accent:#58a6ff;--accent-bg:#0d419d;--person:#d2a8ff;--person-bg:#3b1d68}}
+    text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}text:not([fill]){fill:var(--ink)}
+    .stage{fill:var(--card);stroke:var(--line);stroke-width:2}.n{fill:var(--accent)}.ntext{font-size:16px;font-weight:700;fill:#fff}.label{font-size:18px;font-weight:700}.small{font-size:14px;fill:var(--muted)}.connector{stroke:var(--line);stroke-width:3;fill:none}.callout{fill:var(--person-bg);stroke:var(--person);stroke-width:2}.callout-title{font-size:18px;font-weight:700;fill:var(--person)}.callout-text{font-size:15px;fill:var(--ink)}
+  </style>
+  <rect class="stage" x="20" y="74" width="176" height="156" rx="14"/><rect class="stage" x="216" y="74" width="176" height="156" rx="14"/><rect class="stage" x="412" y="74" width="176" height="156" rx="14"/><rect class="stage" x="608" y="74" width="176" height="156" rx="14"/><rect class="stage" x="804" y="74" width="176" height="156" rx="14"/>
+  <path class="connector" d="M196 152H216M392 152H412M588 152H608M784 152H804"/>
+  <g><circle class="n" cx="45" cy="99" r="15"/><text class="ntext" x="45" y="105" text-anchor="middle">1</text><text class="label" x="108" y="135" text-anchor="middle">Find</text><text class="small" x="108" y="162" text-anchor="middle">Choose a target</text><text class="small" x="108" y="184" text-anchor="middle">and prepare outreach</text></g>
+  <g><circle class="n" cx="241" cy="99" r="15"/><text class="ntext" x="241" y="105" text-anchor="middle">2</text><text class="label" x="304" y="135" text-anchor="middle">Prepare</text><text class="small" x="304" y="162" text-anchor="middle">Bring together</text><text class="small" x="304" y="184" text-anchor="middle">useful context</text></g>
+  <g><circle class="n" cx="437" cy="99" r="15"/><text class="ntext" x="437" y="105" text-anchor="middle">3</text><text class="label" x="500" y="135" text-anchor="middle">Progress</text><text class="small" x="500" y="162" text-anchor="middle">Follow up and</text><text class="small" x="500" y="184" text-anchor="middle">work through concerns</text></g>
+  <g><circle class="n" cx="633" cy="99" r="15"/><text class="ntext" x="633" y="105" text-anchor="middle">4</text><text class="label" x="696" y="135" text-anchor="middle">Decide</text><text class="small" x="696" y="162" text-anchor="middle">Support a clear</text><text class="small" x="696" y="184" text-anchor="middle">commercial decision</text></g>
+  <g><circle class="n" cx="829" cy="99" r="15"/><text class="ntext" x="829" y="105" text-anchor="middle">5</text><text class="label" x="892" y="135" text-anchor="middle">Learn</text><text class="small" x="892" y="162" text-anchor="middle">Review what</text><text class="small" x="892" y="184" text-anchor="middle">happened next</text></g>
+  <rect class="callout" x="20" y="276" width="960" height="78" rx="14"/><circle cx="55" cy="315" r="17" fill="var(--person)"/><path d="M47 316l6 6 12-15" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="callout-title" x="87" y="310">AI prepares the work. A person checks before anything happens.</text><text class="callout-text" x="87" y="334">It can organise information, draft and show gaps. It does not send messages, update a CRM or decide for you.</text>
+</svg>

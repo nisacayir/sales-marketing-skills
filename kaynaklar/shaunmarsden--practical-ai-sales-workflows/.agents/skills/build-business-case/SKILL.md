@@ -1,0 +1,89 @@
+---
+name: build-business-case
+description: Build or audit a written business case for a B2B prospect, for sharing with the decision maker who was not on the call. Use when a call or set of notes has established enough detail to justify a tailored document, or when reviewing an existing draft for generic language, the wrong reader, or missing sections. Do not use merely to draft a short follow up email; use the follow up email skill for that.
+---
+
+# Build a Business Case
+
+> Landed here directly rather than clicking through from a guide? This file is the instruction sheet an AI assistant follows, not written for a first read start to finish. [What is a sales AI skill?](../../../guides/what-is-a-sales-ai-skill.md) has the plain-English version.
+
+You do not need to install anything to try this once. The lines between the dashes at the very top are just this file's label; leave them in. On GitHub, copy this using the **Raw** button near the top of the page rather than selecting the rendered text, so the tables and links below paste in cleanly. Send the whole file as your first message in any AI chat tool, then follow it with your actual inputs.
+
+Turn call evidence into a business case a decision maker can act on without having been in the room. A business case that could apply to any prospect unchanged has failed at its one job.
+
+## Gather the Inputs
+
+List the material supplied before drafting or auditing anything. Inputs may include:
+
+- Current call transcript or discovery notes
+- An existing auto-generated or hand-written draft to audit
+- Confirmed commercial detail already given in this conversation (pricing tier, start date, named contact)
+- Company size or sector signal
+
+If a required input is missing, say so rather than filling the gap with a plausible guess.
+
+## Follow the Source Order
+
+Use this order when deciding what to state as fact:
+
+1. Direct statements from the current call or notes
+2. Commercial detail already confirmed in this conversation
+3. Company information already established (size, sector, systems in use)
+4. Public information about the company, treated as context rather than proof of an internal problem
+
+## Classify the Evidence
+
+Use these labels while drafting:
+
+- `confirmed`: a detail the prospect stated directly, or that was already given in this conversation
+- `inference`: a reasonable interpretation from the prospect's role or sector, still worth checking
+- `unknown`: a detail needed for a section (a date, a name, a figure) that was not established anywhere
+
+An `unknown` needs a placeholder held open for confirmation, clearly marked as such. It should never be answered with an `inference` dressed up as fact.
+
+## Build or Audit the Document
+
+Work through every point below, whether writing a first draft or reviewing one already produced:
+
+- **Structure**: headed prose for the case itself, since it is read start to finish by someone forming a view, not scanned as a reference grid. A compact summary table above the case (company, role or sector, product or programme, start date) is a valid addition, not a violation of this, as long as the case itself still reads as an argument rather than a second reference grid with no narrative in it.
+- **Title**: personalised to the prospect's actual role and sector, for example "for Operations Managers in mid-size logistics", not the bare product name.
+- **Reader and voice**: work out who actually reads this document. If it is being read by someone other than the prospect (a manager, a board, a budget holder), write in the third person about the prospect's situation. Only write in the direct second person if the prospect is genuinely the sole decision maker who will read their own business case.
+- **Applied examples**: three is a good number. Each names the specific manual task and its cost, what the proposed solution addresses, and what changes as a result, drawn entirely from the call. A single short paragraph works; a sub-heading followed by the expected impact and a short list of measurable early success indicators is a stronger, more scannable version of the same content, and is the better default when the source material supports it. An example that would read the same in a different prospect's document is too generic either way; go back to the source material.
+- **Commercial section**: figures the prospect has actually seen or agreed, not internal pricing mechanics that mean nothing to an external reader.
+- **Risk, data or compliance section**: always present, with its own heading, and worded to match what the prospect actually said about their own systems and data handling, not a boilerplate line that happens to contradict it.
+- **Time or resource commitment section**: present, with a real figure.
+- **Next steps section**: present, and honest about what happens next. Never imply that sending the document finishes the process.
+- **Links**: live hyperlinks on descriptive text, never a bare URL and never a reference to an attachment that was not actually sent.
+- **Human check section**: present, and it must list every figure, claim and section a person has to confirm before the document is sent, plus anything left as an `unknown`. A figure the sources never established counts as something to confirm even when no section of the document is currently claiming it, so an absent price, rate or date belongs on this list rather than being left silent.
+
+## Apply the Guardrails
+
+- Never invent a figure, quote, date or commitment that was not established by the sources.
+- Never let a confirmed detail already sitting in the conversation get replaced by a generic placeholder.
+- Never let the risk or data section contradict something specific the prospect said about their own tools or data handling.
+- Keep the applied examples grounded in this call. If two prospects in the same sector would get the same paragraph unchanged, the paragraph is doing no work.
+- Never multiply two unmeasured figures together and present the product. If a calculation needs two inputs and either one is an estimate, a projection or an approximate planning rate, give the inputs separately with their labels and say what would have to be measured before a combined number means anything. Labelling the product as an estimate does not fix this: one number reads as more solid than the two guesses behind it, and a reader who skims will carry the number and leave the labels behind.
+- The one exception: an estimate may be multiplied by a confirmed count, such as an estimated time per person by a confirmed number of people, to give a total in the estimate's own unit, labelled as resting on that estimate. Do not then multiply that total by anything else unmeasured, whether an approximate rate or a hoped-for reduction: that is two unmeasured figures again, one step removed.
+- No em dashes, no emojis.
+
+## Stop When the Task Is Unsafe
+
+Do not produce a finished business case when:
+
+- No call transcript or notes are available, and nothing was established earlier in the conversation
+- The confirmed detail is too thin to personalise the applied examples meaningfully
+- The request is to remove or soften the risk or data section rather than correct it
+
+Explain the limitation and ask for the minimum missing detail instead.
+
+## Require Human Review
+
+Before this goes to a prospect, a person must check that every commercial figure is one the business is actually prepared to honour, that the risk and data section is accurate, and that nothing reads as a guarantee of an outcome. Sending the document and updating the CRM stay subject to explicit human approval.
+
+Read [the audit checklist](references/audit-checklist.md) before presenting a finished or audited draft.
+
+For a fictional test, read [the Hartwell example](references/hartwell-example.md). For two further tests of the same job, read [the Bramfield example](references/bramfield-example.md) and [the Aldercroft example](../../../examples/aldercroft-business-case-transcript.md). All three are scored: [Hartwell](../../../evaluations/hartwell-business-case-review.md), [Bramfield](../../../evaluations/bramfield-business-case-review.md) and [Aldercroft](../../../evaluations/aldercroft-business-case-review.md).
+
+A [shorter prompt](../../../templates/business-case-prompt.md) condensed from this file is what the recipe card carries, for anyone who wants one block to paste rather than a whole instruction sheet. It was [scored separately](../../../evaluations/aldercroft-business-case-prompt-review.md) on the Aldercroft scenario and came out three points higher, which is inside this repository's measured run-to-run movement rather than a result. I thought the prompt's required human-check section explained that gap; [six runs](../../../evaluations/business-case-check-requirement-test.md) rejected it, and the human check requirement above is retained as a clarification with weak evidence behind it rather than as a demonstrated fix. The guardrail above against combining two unmeasured figures, and the exception after it, are both supported by tests: [nineteen runs](../../../evaluations/business-case-stacked-figure-test.md) for the guardrail and [twelve](../../../evaluations/business-case-skill-second-line-test.md) for the exception. Check any derived figure yourself regardless. [Which AI Mistakes Actually Get Through](../../../guides/which-ai-mistakes-get-through.md) sorts every defect found here by whether a careful reader would have noticed it.
+
+[Sales Proof Bench](https://github.com/shaunmarsden/sales-proof-bench) gives the same job to several models with no method attached. On its fictional [Elmsworth case](https://github.com/shaunmarsden/sales-proof-bench/blob/main/cases/elmsworth-business-case-case.md), no run invented a return-on-investment figure, and the marks came off for usability instead: one buried the ask under a prohibited-claims list too long to use in one sitting, and another promised the VP numbers in week five that its own plan delivered in week seven. Those runs used the bench's bare task request rather than this skill, so they show what the job looks like without a method rather than testing this one.

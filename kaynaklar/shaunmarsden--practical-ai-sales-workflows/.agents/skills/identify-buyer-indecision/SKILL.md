@@ -1,0 +1,66 @@
+---
+name: identify-buyer-indecision
+description: Diagnose whether a late-stage buyer's delay is genuine indecision, a fear of making the wrong call, rather than an ordinary objection, missing information, a timing issue, an approval dependency, a reduced business rationale, a soft no, or a genuine disqualification. Use when a positive, unblocked buyer keeps deferring the final decision with no specific stated concern. Do not use this to draft the customer-facing reply; use the buyer indecision workflow's prompt for that once the diagnosis is confirmed.
+---
+
+# Identify Buyer Indecision
+
+> Landed here directly rather than clicking through from a guide? This file is the instruction sheet an AI assistant follows, not written for a first read start to finish. [What is a sales AI skill?](../../../guides/what-is-a-sales-ai-skill.md) has the plain-English version.
+
+You do not need to install anything to try this once. The lines between the dashes at the very top are just this file's label; leave them in. On GitHub, copy this using the **Raw** button near the top of the page rather than selecting the rendered text, so the tables and links below paste in cleanly. Send the whole file as your first message in any AI chat tool, then follow it with your actual inputs.
+
+## Purpose
+
+Distinguish genuine late-stage fear of making the wrong decision from an ordinary objection, missing information, a timing issue, an approval dependency, a reduced business rationale, a soft no, or a genuine disqualification.
+
+## Inputs Required
+
+- Transcript, call notes, or email threads.
+- Current CRM context (stage, stakeholders, timeline).
+
+## Core Directives
+
+1. **Isolate the Driver.** Do not accept "we need to think about it" at face value. Drill down to find the specific risk the buyer fears.
+2. **Reduce Risk, Don't Push.** If it is genuine indecision, the goal is to make the decision feel safer, not to apply pressure.
+3. **Separate Fact from Inference.** Clearly label what the buyer explicitly said versus what you are inferring from their tone or context.
+4. **No Invented Commercials.** Never invent pilots, discounts, contract flexibility, or implementation promises to soothe the buyer.
+5. **No Em Dashes or Emojis.** Use plain ASCII punctuation.
+
+## Execution
+
+Load [the output contract](references/output-contract.md) for strict behavioural boundaries.
+Use this template to format your final analysis:
+
+```markdown
+# Output Template: Buyer Indecision Analysis
+
+> Instructions: the AI must output the analysis using this exact Markdown structure.
+
+## 1. Evidence Extracted
+
+- **Stated Position:** [What the buyer explicitly said or asked for]
+- **Direct Quotes:** [Key phrases supporting the analysis]
+- **Context:** [Relevant CRM stage or stakeholder dynamics]
+
+## 2. Diagnosis
+
+- **Primary Classification:** [Select one: Genuine Indecision | Standard Objection | Timing Issue | Approval Dependency | Soft No | Disqualification]
+- **Underlying Fear/Risk:** [What specifically are they afraid of? For example, "Fear of implementation failure"]
+- **Confidence Level:** [High / Medium / Low, based on the quality of evidence]
+
+## 3. Inferences & Unknowns
+
+- **Inferences:** [What the AI is inferring from context, clearly labelled as inference]
+- **Missing Evidence:** [What information is needed to confirm the diagnosis]
+
+## 4. Recommended Next Steps (For Human Review)
+
+- **Do Not Do:** [Actions the AI advises against, for example "Do not offer a discount"]
+- **Suggested Approach:** [How to reduce the perceived risk without changing commercial terms]
+- **Questions to Ask:** [One or two specific questions to ask the buyer to uncover the missing evidence]
+```
+Run [the human review checklist](checks/checklist.md) before anything from this analysis is acted on.
+
+This skill diagnoses only. For drafting the actual customer-facing response once genuine indecision is confirmed, use the [buyer indecision workflow](../../../workflows/07-buyer-indecision.md) and its [prompt template](../../../templates/buyer-indecision-prompt.md).
+
+Read [the fictional example](references/fictional-example.md) for a test, or [the Wrenmoor example](../../../examples/wrenmoor-indecision-input.md) for a harder test of the same job. Two scored tests sit behind those: [Calderwood](../../../evaluations/calderwood-indecision-review.md) and [Wrenmoor](../../../evaluations/wrenmoor-indecision-review.md). A [real use finding](../../../evaluations/buyer-indecision-real-use-finding.md) records a real opportunity that looked like indecision and turned out to be a policy blocker, where the right answer was not to use this method at all.

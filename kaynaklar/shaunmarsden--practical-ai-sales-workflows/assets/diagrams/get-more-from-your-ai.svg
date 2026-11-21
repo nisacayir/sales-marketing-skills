@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400" role="img" aria-labelledby="title description">
+  <title id="title">Get more from your AI</title>
+  <desc id="description">A five-layer progression from a setup prompt to projects, reusable skills, connected tools and carefully controlled automations.</desc>
+  <style>
+    :root{--ink:#1f2937;--muted:#57606a;--line:#d0d7de;--card:#f6f8fa;--blue:#0969da;--blue-bg:#ddf4ff;--amber:#9a6700;--amber-bg:#fff8c5}
+    @media (prefers-color-scheme:dark){:root{--ink:#f0f6fc;--muted:#a9b1bb;--line:#30363d;--card:#161b22;--blue:#58a6ff;--blue-bg:#0d419d;--amber:#e3b341;--amber-bg:#3d2e00}}
+    text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}text:not([fill]){fill:var(--ink)}.card{fill:var(--card);stroke:var(--line);stroke-width:2}.tag{font-size:13px;font-weight:700}.head{font-size:20px;font-weight:700}.body{font-size:14px;fill:var(--muted)}.top{font-size:23px;font-weight:700}.sub{font-size:16px;fill:var(--muted)}.arrow{stroke:var(--line);stroke-width:3;fill:none}.warning{font-size:15px;font-weight:700}
+  </style>
+  <text class="top" x="20" y="36">Move up only when the layer you have stops saving you time.</text><text class="sub" x="20" y="62">Each layer should be useful and safe before you add the next one.</text>
+  <rect class="card" x="20" y="104" width="174" height="178" rx="14"/><text class="tag" x="42" y="133" fill="var(--blue)">LAYER 1</text><text class="head" x="42" y="168">Setup prompt</text><text class="body" x="42" y="201">Give the tool useful</text><text class="body" x="42" y="222">standing context.</text>
+  <rect class="card" x="214" y="104" width="174" height="178" rx="14"/><text class="tag" x="236" y="133" fill="var(--blue)">LAYER 2</text><text class="head" x="236" y="168">Project</text><text class="body" x="236" y="201">Add approved</text><text class="body" x="236" y="222">reference material.</text>
+  <rect class="card" x="408" y="104" width="174" height="178" rx="14"/><text class="tag" x="430" y="133" fill="var(--blue)">LAYER 3</text><text class="head" x="430" y="168">Skill</text><text class="body" x="430" y="201">Reuse a proven</text><text class="body" x="430" y="222">method for a task.</text>
+  <rect class="card" x="602" y="104" width="174" height="178" rx="14"/><text class="tag" x="624" y="133" fill="var(--blue)">LAYER 4</text><text class="head" x="624" y="168">Connection</text><text class="body" x="624" y="201">Use live context</text><text class="body" x="624" y="222">from approved tools.</text>
+  <rect class="card" x="796" y="104" width="184" height="178" rx="14"/><text class="tag" x="818" y="133" fill="var(--amber)">LAYER 5</text><text class="head" x="818" y="168">Automation</text><text class="body" x="818" y="201">Use narrow triggers</text><text class="body" x="818" y="222">and approval gates.</text>
+  <path class="arrow" d="M194 193H214M388 193H408M582 193H602M776 193H796"/>
+  <rect x="20" y="320" width="960" height="42" rx="10" fill="var(--amber-bg)"/><text class="warning" x="500" y="347" text-anchor="middle" fill="var(--amber)">More connected does not mean less human checking.</text>
+</svg>

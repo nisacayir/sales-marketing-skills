@@ -1,0 +1,73 @@
+# 🧩 Recipe: Check Whether It Actually Fits
+
+One job, one page, with the prompt on it. Nothing else in the repository is required to use this.
+
+## Helps with
+
+Working out where your offer is a good fit, a poor fit or still uncertain for one prospect, before you build a business case around a use case that was never going to work.
+
+## You need
+
+- Every use case the prospect described, team by team or role by role
+- What the product is confirmed to do, not what you think it probably could
+
+## You'll get
+
+Each use case marked as a good fit, a poor fit or uncertain, with the reason stated plainly, not softened.
+
+<!-- prompts:begin -->
+
+## Paste this into your AI tool
+
+<!-- prompt:begin source=templates/fit-and-limitations-review-prompt.md -->
+```text
+Act as a careful reviewer of whether an offer genuinely fits a prospect's actual use cases, not a generic pitch writer.
+
+Use only the use cases I describe and only the product capability I confirm. Do not assume a capability is likely to work just because it seems like a reasonable extension of something confirmed.
+
+For every use case I describe, classify it as one of:
+
+1. Good fit: the confirmed need matches confirmed capability directly.
+2. Poor fit: state the specific mismatch plainly. Never reframe a real limitation as a hidden advantage.
+3. Uncertain: there is not yet enough evidence to call it either way. Use this honestly, not as a softer way of saying poor fit.
+
+Rules:
+- Classify each use case separately; do not let a strong good fit anywhere pull a weaker one toward a more flattering answer
+- State the actual reason for each classification, not just the label
+- Never claim a capability that has not actually been confirmed
+- Never let "uncertain" quietly become "good fit" because a decision is wanted sooner
+- If a stakeholder's general description of a role, such as calling it clinical or interpretive, conflicts with the specific, structured tasks described for that same role, name the conflict directly rather than quietly picking whichever version is more convenient
+```
+<!-- prompt:end -->
+
+Then paste your own notes underneath it. Everything the prompt needs is listed under **You need** above.
+
+<!-- prompts:end -->
+
+## Open
+
+**[Workflow](../workflows/13-fit-and-limitations-review.md)**  
+Also: [Prompt](../templates/fit-and-limitations-review-prompt.md) · [Skill](../.agents/skills/fit-and-limitations-review/SKILL.md) · [Worked example](../examples/kellow-fit-review-output.md) · [Harder test: the same word means two different things](../examples/aldermere-fit-review-output.md)
+
+## The AI cannot decide
+
+- What your product is confirmed to do, when that is unclear
+- What to build a business case around, what to disqualify, and what to tell the prospect
+
+## You must check
+
+- Every good fit rests on something confirmed, not on what you assume the product can do
+- Every poor fit names a real mismatch and never turns it into a hidden advantage
+- "Uncertain" is used honestly, not as a softer way of saying no
+
+## Then
+
+Decide yourself which use cases to build a case around, which to disqualify, and which need more evidence before either.
+
+---
+
+For the fuller method, including how to sort a mixed case, open the [workflow](../workflows/13-fit-and-limitations-review.md).
+
+---
+
+**Tried this recipe?** [Give quick private feedback](https://docs.google.com/forms/d/e/1FAIpQLSdBC8yOUiylKemlvzrZc2FJ9QD0Pjz592ebPaItAubBRwCUbA/viewform) or [share public feedback](https://github.com/shaunmarsden/practical-ai-sales-workflows/discussions/new?category=feedback). It takes about two minutes. Please do not include customer, employer or confidential information.

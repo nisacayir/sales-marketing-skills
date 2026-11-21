@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="430" viewBox="0 0 1000 430" role="img" aria-labelledby="title description">
+  <title id="title">How this repository labels evidence</title>
+  <desc id="description">A fictional note is separated into a confirmed fact, an estimate and an unknown. The labels make clear what the source says and what still needs checking.</desc>
+  <style>
+    :root{--ink:#1f2937;--muted:#57606a;--line:#d0d7de;--card:#f6f8fa;--confirmed:#1a7f37;--confirmed-bg:#dafbe1;--estimate:#9a6700;--estimate-bg:#fff8c5;--unknown:#8250df;--unknown-bg:#fbefff}
+    @media (prefers-color-scheme:dark){:root{--ink:#f0f6fc;--muted:#a9b1bb;--line:#30363d;--card:#161b22;--confirmed:#7ee787;--confirmed-bg:#15361d;--estimate:#e3b341;--estimate-bg:#3d2e00;--unknown:#d2a8ff;--unknown-bg:#3b1d68}}
+    text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}text:not([fill]){fill:var(--ink)}.card{fill:var(--card);stroke:var(--line);stroke-width:2}.head{font-size:22px;font-weight:700}.body{font-size:16px;fill:var(--muted)}.quote{font-size:19px;font-weight:600}.label{font-size:14px;font-weight:700;letter-spacing:.05em}.result{font-size:18px;font-weight:700}.note{font-size:15px;fill:var(--muted)}.arrow{stroke:var(--line);stroke-width:3;fill:none}
+  </style>
+  <text x="20" y="35" class="head">Label the evidence before you use it.</text><text x="20" y="61" class="body">A short fictional example shows the distinction between what was said and what still needs checking.</text>
+  <rect class="card" x="20" y="101" width="420" height="266" rx="14"/><text class="label" x="48" y="135" fill="var(--muted)">SOURCE NOTE</text><text class="quote" x="48" y="180">“Finance will check the numbers.</text><text class="quote" x="48" y="208">We hope to decide by July.”</text><line x1="48" y1="235" x2="410" y2="235" stroke="var(--line)" stroke-width="2"/><text class="note" x="48" y="268">The note does not confirm a final decision,</text><text class="note" x="48" y="291">a date, or whether the numbers will be approved.</text>
+  <path class="arrow" d="M440 234H500"/><path d="M492 227l10 7-10 7" fill="none" stroke="var(--line)" stroke-width="3"/>
+  <rect x="530" y="101" width="450" height="70" rx="12" fill="var(--confirmed-bg)" stroke="var(--confirmed)" stroke-width="2"/><text class="label" x="555" y="130" fill="var(--confirmed)">CONFIRMED</text><text class="result" x="555" y="155">Finance will check the numbers.</text>
+  <rect x="530" y="199" width="450" height="70" rx="12" fill="var(--estimate-bg)" stroke="var(--estimate)" stroke-width="2"/><text class="label" x="555" y="228" fill="var(--estimate)">ESTIMATE</text><text class="result" x="555" y="253">They hope to decide by July.</text>
+  <rect x="530" y="297" width="450" height="70" rx="12" fill="var(--unknown-bg)" stroke="var(--unknown)" stroke-width="2"/><text class="label" x="555" y="326" fill="var(--unknown)">UNKNOWN</text><text class="result" x="555" y="351">Whether they will decide or approve it.</text>
+  <text class="body" x="20" y="406">The labels are not a score. They stop a plausible draft quietly turning an estimate into a commitment.</text>
+</svg>

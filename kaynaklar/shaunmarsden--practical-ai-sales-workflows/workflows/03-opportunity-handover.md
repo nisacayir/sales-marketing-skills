@@ -1,0 +1,93 @@
+# Opportunity Handover
+
+Pass a sales opportunity to another person without losing the useful context or making the deal sound further along than it is.
+
+## 👀 At a Glance
+
+| | |
+| --- | --- |
+| **Use this when** | An opportunity is moving to another person, team or stage |
+| **What you need** | Recent call evidence, CRM notes, relevant emails and agreed actions |
+| **What you get** | A short handover with the current position, evidence, risks and next action |
+| **Your responsibility** | Check the handover and speak to the person receiving it |
+
+## 🔄 How It Works
+
+```mermaid
+flowchart TB
+    A["1. Gather the useful evidence<br/>Calls, CRM notes, emails and actions"]
+    B["2. Build the handover<br/>Position, people, risks and next action"]
+    C["3. Check it together<br/>Correct gaps and confirm ownership"]
+    A --> B --> C
+```
+
+## 🚀 Start Here
+
+- [Use the Opportunity Handover prompt](../templates/opportunity-handover-prompt.md) for a one-off handover without installing anything
+- [See the completed Hartwell handover](../examples/hartwell-opportunity-handover.md)
+- [Read the honest review](../evaluations/hartwell-opportunity-handover-review.md)
+- [Use with AI: the opportunity-handover skill](../.agents/skills/opportunity-handover/SKILL.md) for a reusable instruction instead of pasting the prompt each time
+- [Read the real-use finding](../evaluations/opportunity-handover-real-use-finding.md)
+
+<details>
+<summary><strong>See exactly what it produces</strong></summary>
+
+1. A 30 second brief
+2. The current position
+3. People involved and their confirmed roles
+4. Business problem and desired outcome
+5. Confirmed evidence
+6. Estimates, assumptions and unknowns
+7. Actions, risks and recommended next step
+8. Links to the useful source material
+
+</details>
+
+<details>
+<summary><strong>See the full method</strong></summary>
+
+### 1. Gather the Evidence
+
+Use the most recent approved sources. Include useful call notes, CRM history, customer emails, proposals and agreed actions. Leave out background that will not help the next person.
+
+### 2. Separate Evidence from Interpretation
+
+Keep confirmed facts, customer estimates, your own assumptions and unknowns apart. Keep conditions such as subject to approval or timing to be confirmed.
+
+### 3. Write for the Next Person
+
+Put the current position and next action first. The next person shouldn't have to read the whole history to see where things stand.
+
+### 4. Link to the Sources
+
+Summarise the evidence, but keep links to the useful records. A handover should help someone find their way through the history, not replace it with a summary nobody can check.
+
+### 5. Complete the Handover Together
+
+Talk through the judgement calls, risks and gaps. Confirm who owns the next action and what the new owner still needs to check.
+
+</details>
+
+## ✅ Check Before You Hand It Over
+
+- Can someone understand the current position in 30 seconds?
+- Is every important claim supported by a source?
+- Are estimates and assumptions labelled?
+- Are tentative stakeholders still described as tentative?
+- Does every action have the right owner and timing?
+- Is the recommended next step appropriate for the evidence?
+- Has the new owner accepted it?
+
+## 📏 What to Measure
+
+- Time needed to prepare and understand the handover
+- Questions the receiving person still has
+- Factual corrections needed
+- Missed actions or duplicated work after the handover
+- Whether the next step happened with the right context
+
+The aim is a handover where nothing gets lost and the next person can judge well, not a longer summary.
+
+## 💬 Tried It?
+
+[Share structured workflow feedback](https://github.com/shaunmarsden/practical-ai-sales-workflows/issues/new?template=workflow-feedback.md) about what worked, where you got stuck and what you would change. Please do not include customer, employer or confidential information.
